@@ -8,6 +8,15 @@ function mostrarpalavrachave() {
     const palavrasChaves = processaTexto(texto)
 
     campoResultado.textContent = palavrasChave.join(" - ");
+    const frequencias = contaFrequencias(palavras);
+    let ordenadas = Objects.keys(frequencias).sort(ordenaPalavra);
+
+    finction ordenaPalavra(p1, p2){
+        return frequencias[p2] - frequencias[p1];
+    }
+    console.log(ordenadas);
+    return palavras.slice(0. 10);
+
 }
 
 function processaTexto(texto){
@@ -23,7 +32,7 @@ function processaTexto(texto){
         }
       }
 
-      console.log(frequencias);
+      let frequencias;
 
       return palavras;
 }
