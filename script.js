@@ -1,11 +1,17 @@
 const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
+
 botaoMostraPalavras.addEventListener('click', mostrarpalavrachave);
 
-funcion mostrarpalavrachave() {
-    alert("fui clicado")
-    const texto = document.querySelector("#entrada de texto").value;
+function mostrarpalavrachave() {
+    const texto = document.querySelector("#entrada-de-texto").value;
     const campoResultado = document.querySelector("resultado-pavrachave")
-    const palavras = texto.split(" ")
+    const palavrasChaves = processaTexto(texto)
 
-    campoResultado.textContent = palavras.join(", ");
+    campoResultado.textContent = palavrasChave.join(" - ");
+}
+
+function processaTexto(texto){
+      let palavra = texto.split(/\P{L}+/u))
+      
+      return palavras;
 }
